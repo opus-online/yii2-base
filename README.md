@@ -1,3 +1,7 @@
+[![Build Status](https://scrutinizer-ci.com/g/opus-online/yii2-base/badges/build.png?b=master)](https://scrutinizer-ci.com/g/opus-online/yii2-base/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/opus-online/yii2-base/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/opus-online/yii2-base/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/opus-online/yii2-base/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/opus-online/yii2-base/?branch=master)
+
 Base components for Yii2 projects and modules
 =========
 
