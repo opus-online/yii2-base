@@ -29,6 +29,9 @@ class SafeSaverBehaviourTest extends \PHPUnit_Framework_TestCase
         $this->mock->attachBehavior('safeSaver', SafeSaverBehaviour::class);
     }
 
+    /**
+     * @covers \opus\base\behaviors\SafeSaverBehaviour::saveSafe
+     */
     public function testSaveOk()
     {
         $this->mock->expects($this->once())->method('save');
@@ -36,6 +39,9 @@ class SafeSaverBehaviourTest extends \PHPUnit_Framework_TestCase
         $this->mock->saveSafe();
     }
 
+    /**
+     * @covers \opus\base\behaviors\SafeSaverBehaviour::saveSafe
+     */
     public function testSaveFail()
     {
         $this->mock->expects($this->any())->method('save')->will($this->returnValue(false));
@@ -43,6 +49,9 @@ class SafeSaverBehaviourTest extends \PHPUnit_Framework_TestCase
         $this->mock->saveSafe();
     }
 
+    /**
+     * @covers \opus\base\behaviors\SafeSaverBehaviour::saveSafe
+     */
     public function testSaveArgs()
     {
         $args = ['arg1', 'arg2'];
@@ -51,7 +60,10 @@ class SafeSaverBehaviourTest extends \PHPUnit_Framework_TestCase
         $this->mock->saveSafe($args);
     }
 
-    public function testFaulyAttach()
+    /**
+     * @covers \opus\base\behaviors\SafeSaverBehaviour::attach
+     */
+    public function testFaultyAttach()
     {
         $behavior = new SafeSaverBehaviour();
         $this->setExpectedException(InvalidParamException::class);

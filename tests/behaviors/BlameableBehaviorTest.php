@@ -36,11 +36,17 @@ class BlameableBehaviorTest extends \PHPUnit_Framework_TestCase
         ]);
     }
 
+    /**
+     * @covers \opus\base\behaviors\BlameableBehavior::inject
+     */
     public function testCreate()
     {
         // TODO: TBD
     }
 
+    /**
+     * @covers \opus\base\behaviors\BlameableBehavior::inject
+     */
     public function testUpdate()
     {
        // TODO: TBD

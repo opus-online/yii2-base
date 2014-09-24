@@ -33,6 +33,9 @@ class TimestampBehaviorTest extends \PHPUnit_Framework_TestCase
         ]);
     }
 
+    /**
+     * @covers \opus\base\behaviors\TimestampBehavior::inject
+     */
     public function testCreate()
     {
         $now = new Expression('NOW()');
@@ -43,6 +46,9 @@ class TimestampBehaviorTest extends \PHPUnit_Framework_TestCase
         $this->mock->validate();
     }
 
+    /**
+     * @covers \opus\base\behaviors\TimestampBehavior::inject
+     */
     public function testUpdate()
     {
         $now = new Expression('NOW()');
