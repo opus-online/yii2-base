@@ -39,7 +39,6 @@ class TimestampBehaviorTest extends \PHPUnit_Framework_TestCase
     public function testCreate()
     {
         $now = new Expression('NOW()');
-
         $this->mock->expects($this->once())->method('getIsNewRecord')->will($this->returnValue(true));
         $this->mock->expects($this->any())->method('hasAttribute')->will($this->returnValue(true));
         $this->mock->expects($this->once())->method('setAttribute')->with('cr', $now);
@@ -52,7 +51,6 @@ class TimestampBehaviorTest extends \PHPUnit_Framework_TestCase
     public function testUpdate()
     {
         $now = new Expression('NOW()');
-
         $this->mock->expects($this->once())->method('getIsNewRecord')->will($this->returnValue(false));
         $this->mock->expects($this->any())->method('hasAttribute')->will($this->returnValue(true));
         $this->mock->expects($this->once())->method('setAttribute')->with('up', $now);
