@@ -24,7 +24,13 @@ class BlameableBehaviorTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->mock = $this->getMock(ActiveRecord::class, ['save', 'hasAttribute', 'getIsNewRecord', 'setAttribute']);
+        $this->mock = $this->getMock(ActiveRecord::class, [
+                'save',
+                'hasAttribute',
+                'getIsNewRecord',
+                'setAttribute'
+            ]);
+
         $this->mock->attachBehavior('bl', [
             'class' => BlameableBehavior::class,
         ]);
