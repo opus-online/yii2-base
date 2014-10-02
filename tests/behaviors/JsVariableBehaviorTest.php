@@ -66,7 +66,7 @@ class JsVariablesBehaviorTest extends \PHPUnit_Framework_TestCase
         $behavior->registerJsVariables($this->getTestData());
         $behavior->registerJsVariables(['var' => 'val', 'otherNamespace']);
 
-        $view = $this->getMock(View::class, ['registerJs']);
+        $view = $this->getMock(View::className(), ['registerJs']);
         $view->expects($this->once())->method('registerJs')->with($return, View::POS_HEAD);
 
         $event = new Event();
@@ -87,7 +87,7 @@ class JsVariablesBehaviorTest extends \PHPUnit_Framework_TestCase
         $behavior->registerJsVariables($this->getTestData(), '_var', JSON_FORCE_OBJECT);
         $behavior->registerJsVariables(['var' => 'val', 'otherNamespace']);
 
-        $view = $this->getMock(View::class, ['registerJs']);
+        $view = $this->getMock(View::className(), ['registerJs']);
         $view->expects($this->once())->method('registerJs')->with($return, View::POS_HEAD);
 
         $event = new Event();
