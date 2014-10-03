@@ -23,7 +23,7 @@ class QueryLanguageBehaviourTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->mock = $this->getMock(Controller::class);
+        $this->mock = $this->getMock(Controller::class, ['mock']);
 
         $this->mock->attachBehavior('queryLanguage', [
             'class' => QueryLanguageBehaviour::class,
