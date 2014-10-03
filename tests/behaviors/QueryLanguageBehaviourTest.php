@@ -18,7 +18,7 @@ use yii\base\Controller;
  */
 class QueryLanguageBehaviourTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var Controller|BlameableBehaviorTest|\PHPUnit_Framework_MockObject_MockObject $mock */
+    /** @var Controller|QueryLanguageBehaviourTest|\PHPUnit_Framework_MockObject_MockObject $mock */
     private $mock;
 
     public function setUp()
