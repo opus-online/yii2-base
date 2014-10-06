@@ -31,7 +31,7 @@ class QueryLanguageBehaviorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers \opus\base\behaviors\QueryLanguageBehaviour::getQueryLanguage
+     * @covers \opus\base\behaviors\QueryLanguageBehavior::getQueryLanguage
      */
     public function testGetQueryLanguage()
     {
@@ -39,7 +39,7 @@ class QueryLanguageBehaviorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers \opus\base\behaviors\QueryLanguageBehaviour::createQueryLanguageUrl
+     * @covers \opus\base\behaviors\QueryLanguageBehavior::createQueryLanguageUrl
      */
     public function testCreateQueryLanguageUrl()
     {
