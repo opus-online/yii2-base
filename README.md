@@ -25,5 +25,5 @@ Run `composer install` and then in the project root directory
 
 Changelog
 ---------
-* 1.x - Added `JsVariablesBehavior`
+* 1.1 - Added `JsVariablesBehavior`, `QueryLanguageBehaviour`
 * 1.0 - Initial commit
