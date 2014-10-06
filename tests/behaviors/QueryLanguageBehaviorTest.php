@@ -7,7 +7,7 @@
 
 namespace tests\behaviors;
 
-use opus\base\behaviors\QueryLanguageBehaviour;
+use opus\base\behaviors\QueryLanguageBehavior;
 use yii\base\Controller;
 
 /**
@@ -16,7 +16,7 @@ use yii\base\Controller;
  * @author Mihkel Viilveer <mihkel@opus.ee>
  * @package tests\behaviors
  */
-class QueryLanguageBehaviourTest extends \PHPUnit_Framework_TestCase
+class QueryLanguageBehaviorTest extends \PHPUnit_Framework_TestCase
 {
     /** @var Controller|QueryLanguageBehaviourTest|\PHPUnit_Framework_MockObject_MockObject $mock */
     private $mock;
@@ -26,7 +26,7 @@ class QueryLanguageBehaviourTest extends \PHPUnit_Framework_TestCase
         $this->mock = $this->getMock(Controller::class, [], ['mock', null]);
 
         $this->mock->attachBehavior('queryLanguage', [
-            'class' => QueryLanguageBehaviour::class,
+            'class' => QueryLanguageBehavior::class,
         ]);
     }
 
