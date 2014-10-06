@@ -15,12 +15,12 @@ use yii\web\Request;
 use yii\helpers\Url;
 
 /**
- * Class QueryLanguageBehaviour
+ * Class QueryLanguageBehavior
  *
  * @author Mihkel Viilveer <mihkel@opus.ee>
  * @package opus\base\behaviors
  */
-class QueryLanguageBehaviour extends Behavior
+class QueryLanguageBehavior extends Behavior
 {
     /**
      * Query param for language detection
