@@ -25,7 +25,7 @@ class QueryLanguageBehaviour extends Behavior
     /**
      * Query param for language detection
      */
-    const DATA_LANGUAGE_QUERY_PARAM = 'lang';
+    public static $dataLanguageQueryParam = 'lang';
 
     /**
      * @var string
@@ -52,7 +52,7 @@ class QueryLanguageBehaviour extends Behavior
      */
     public function getQueryLanguage()
     {
-        return $this->getRequest()->get(self::DATA_LANGUAGE_QUERY_PARAM, \Yii::$app->language);
+        return $this->getRequest()->get(self::$dataLanguageQueryParam, \Yii::$app->language);
     }
 
     /**
@@ -64,7 +64,7 @@ class QueryLanguageBehaviour extends Behavior
         if (!is_array($url)) {
             throw new InvalidValueException('QueryLanguageBehaviour accepts only arrays');
         }
-        $url[self::DATA_LANGUAGE_QUERY_PARAM] = $this->getRequest()->get(self::DATA_LANGUAGE_QUERY_PARAM);
+        $url[self::$dataLanguageQueryParam] = $this->getRequest()->get(self::$dataLanguageQueryParam);
         /** @var Url $url */
         $url = \Yii::createObject(Url::class);
         return $url::toRoute($url);
@@ -78,4 +78,4 @@ class QueryLanguageBehaviour extends Behavior
     {
         return \Yii::$app->get($this->request);
     }
-} 
+}
