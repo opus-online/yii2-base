@@ -60,7 +60,6 @@ class JsVariablesBehavior extends Behavior
 
 
         }
-        var_dump($script);
         $view->registerJs($script, View::POS_HEAD);
     }
 
