@@ -66,8 +66,8 @@ class QueryLanguageBehavior extends Behavior
         }
         $url[self::$dataLanguageQueryParam] = $this->getRequest()->get(self::$dataLanguageQueryParam);
         /** @var Url $url */
-        $url = \Yii::createObject(Url::class);
-        return $url::toRoute($url);
+        $urlHelper = \Yii::createObject(Url::class);
+        return $urlHelper::toRoute($url);
     }
 
     /**
