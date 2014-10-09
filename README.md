@@ -15,6 +15,8 @@ Behaviors:
 * BlameableBehavior - auto-fills `created_by` and `updated_by` fields
 * SafeSaverBehavior - provides `saveSafe($attributes)` method to AR models
 * TimestampBehavior - auto-fills `created_at` and `updated_at` fields
+* QueryLanguageBehaviour - adds functionality to generate links with query languages with ease
+* ResponseFormatBehavior - auto-assigns responseType according to response header in Response object
 
 Running tests
 -------------
@@ -25,5 +27,6 @@ Run `composer install` and then in the project root directory
 
 Changelog
 ---------
+* 1.2 - Added `ResponseFormatBehavior`
 * 1.1 - Added `JsVariablesBehavior`, `QueryLanguageBehaviour`
 * 1.0 - Initial commit
